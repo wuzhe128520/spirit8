@@ -1,0 +1,53 @@
+.on {
+  background-color: #222!important;
+  color: #fff;
+  padding: 0!important;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-transform: uppercase;
+}
+a {
+  color: #fff;
+}
+a:hover {
+  text-decoration: none;
+  color: #ccc;
+}
+.margin-l-10 {
+  margin-left: 10px;
+}
+.margin-t-10 {
+  margin-top: 10px;
+}
+.margin-r-10 {
+  margin-right: 10px;
+}
+.margin-b-10 {
+  margin-bottom: 10px;
+}
+.margin-l-20 {
+  margin-left: 20px;
+}
+.margin-t-20 {
+  margin-top: 20px;
+}
+.margin-r-20 {
+  margin-right: 20px;
+}
+.margin-b-20 {
+  margin-bottom: 20px;
+}
+/*上下反复移动的动画*/
+@keyframes updown {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(10px);
+  }
+}
