@@ -9,9 +9,21 @@
     <!-- Bootstrap -->
     <link rel="stylesheet" href="js/plugins/bootstrap3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="js/plugins/owl-carousel/owl.carousel.css">
+    <link rel="stylesheet" href="js/plugins/owl-carousel/owl.theme.css">
+    <link rel="stylesheet" href="js/plugins/isotope/isotope-docs.css">
     <link rel="stylesheet" href="css/spirit8.css">
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <style>
+        #owl-demo .item {
+            margin: 3px;
+        }
+        #owl-demo .item img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+    </style>
+      <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
     <script src="js/libs/html5shiv.min.js"></script>
@@ -153,10 +165,53 @@
     </div>
     <!--service end-->
 
+    <!-- responsive carousel begin -->
+    <div id="owl-demo">
+        <div class="item"><img src="imgs/owl5.jpg" alt=""></div>
+        <div class="item"><img src="imgs/owl5.jpg" alt=""></div>
+        <div class="item"><img src="imgs/owl5.jpg" alt=""></div>
+        <div class="item"><img src="imgs/owl5.jpg" alt=""></div>
+        <div class="item"><img src="imgs/owl5.jpg" alt=""></div>
+        <div class="item"><img src="imgs/owl5.jpg" alt=""></div>
+        <div class="item"><img src="imgs/owl5.jpg" alt=""></div>
+        <div class="item"><img src="imgs/owl5.jpg" alt=""></div>
+    </div>
+
+    <div class="team-bg text-center">
+        <div class="overlay">
+            <div class="container">
+                <div class="section-title text-center">
+                    <h2>
+                        Take a look at <strong>our services</strong>
+                    </h2>
+                    <div class="line clearfix">
+                        <hr>
+                    </div>
+                </div>
+            </div>
+            <div class="team">
+                .item*6>.thumbnail>img[src="imgs/"]
+            </div>
+        </div>
+    </div>
+    <!-- responsive carousel end -->
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="js/libs/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/plugins/bootstrap3.3.7/js/bootstrap.min.js"></script>
+    <script src="js/plugins/owl-carousel/owl.carousel.min.js"></script>
+    <script src="js/plugins/isotope/jquery.isotope.js"></script>
     <script src="js/spirit8.js"></script>
+    <script>
+        $(function() {
+            $("#owl-demo").owlCarousel({
+                items: 4, //默认列数
+                itemsDesktop: [1199,4],//1199宽度显示4列
+                itemsDesktopSmall: [979, 3],//979宽度显示三列
+               // navigation: true //添加轮播指示器
+                iteamsCustom:
+            });
+        });
+    </script>
   </body>
 </html>

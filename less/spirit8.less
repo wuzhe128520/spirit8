@@ -65,16 +65,7 @@ body {
     }
   }
 }
-/*背景渐变*/
-.overlay {
-  background: -moz-linear-gradient(top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.73) 17%, rgba(0,0,0,0.66) 35%, rgba(0,0,0,0.55) 62%, rgba(0,0,0,0.4) 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0.8)), color-stop(17%,rgba(0,0,0,0.73)), color-stop(35%,rgba(0,0,0,0.66)), color-stop(62%,rgba(0,0,0,0.55)), color-stop(100%,rgba(0,0,0,0.4)));
-  background: -webkit-linear-gradient(top, rgba(0,0,0,0.8) 0%,rgba(0,0,0,0.73) 17%,rgba(0,0,0,0.66) 35%,rgba(0,0,0,0.55) 62%,rgba(0,0,0,0.4) 100%);
-  background: -o-linear-gradient(top, rgba(0,0,0,0.8) 0%,rgba(0,0,0,0.73) 17%,rgba(0,0,0,0.66) 35%,rgba(0,0,0,0.55) 62%,rgba(0,0,0,0.4) 100%);
-  background: -ms-linear-gradient(top, rgba(0,0,0,0.8) 0%,rgba(0,0,0,0.73) 17%,rgba(0,0,0,0.66) 35%,rgba(0,0,0,0.55) 62%,rgba(0,0,0,0.4) 100%);
-  background: linear-gradient(to bottom, rgba(0,0,0,0.8) 0%,rgba(0,0,0,0.73) 17%,rgba(0,0,0,0.66) 35%,rgba(0,0,0,0.55) 62%,rgba(0,0,0,0.4) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cc000000', endColorstr='#66000000',GradientType=0 );
-}
+
 .content {
   position: relative;
   padding: 20% 0 0 0;
@@ -132,6 +123,15 @@ body {
 /*===services begin ===*/
 .services {
   margin: 40px 0 0;
+}
+.service-devices {
+  margin-top: 35px;
+
+}
+/*===services end ===*/
+
+.services,
+.team-bg {
   .line {
     position: relative;
     border-top-style: solid;
@@ -150,11 +150,17 @@ body {
     border-color: rgba(252, 172, 69, 0.34);
   }
 }
-.service-devices {
-  margin-top: 35px;
+.team-bg {
+  background: url(../imgs/bg-02.jpg) no-repeat center fixed;
+  background-size: cover;
+  color: #fff;
+  .overlay {
+    height: auto;
 
+  }
 }
-/*===services end ===*/
+
+
 
 .icon {
   cursor: pointer;
