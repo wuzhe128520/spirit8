@@ -3,7 +3,8 @@
 body {
   font-family: "Microsoft yahei";
   color: #5a5a5a;
-  height: 2000px;
+  height: 4000px;
+  background: #fff;
 }
 .menu {
   padding: 20px;
@@ -32,6 +33,10 @@ body {
         &.active {
           &>a {
             color: #fcac45;
+            background-color: transparent;
+            &:hover {
+              background-color: transparent;
+            }
           }
         }
       }
@@ -85,8 +90,7 @@ body {
 }
 /*=== about us begin ===*/
 .about {
-  margin: 40px 0 0;
-  padding: 20px 0 88px;
+  padding: 60px 0 88px;
   .about-list {
     margin: 30px 0 0;
   }
@@ -126,12 +130,50 @@ body {
 }
 .service-devices {
   margin-top: 35px;
-
+  h4 {
+    margin: 15px 0 6px 0;
+  }
 }
 /*===services end ===*/
+.team {
+  .overlay {
+    padding: 80px 0;
+  }
+  .team-item {
+    background-color: transparent;
+  }
+}
+.team-item {
+    .thumbnail {
+      background-color: transparent;
+      border: none;
+      .caption {
+        color: #fff;
+      }
+      img {
+        display: block;
+        width: 120px;
+        height: 120px;
+        border: 4px solid transparent;
+      }
+    }
+    a {
+      display: block;
+      border: 4px solid transparent;
+      margin: 15px;
+      &:hover {
+        .thumbnail {
+          &>img {
+            border-color: #fcac45;
+          }
+        }
+      }
+    }
+}
 
 .services,
-.team-bg {
+.team-bg,
+.filter-img {
   .line {
     position: relative;
     border-top-style: solid;
@@ -156,13 +198,14 @@ body {
   color: #fff;
   .overlay {
     height: auto;
-
   }
 }
 
+.filter-img {
+    padding: 80px 0;
+}
 
-
-.icon {
+.icon-diy {
   cursor: pointer;
   width: 100px;
   height: 100px;
@@ -176,3 +219,31 @@ body {
     color: #fff;
   }
 }
+
+/*===设置owl插件指示器的样式 begin===*/
+.owl-theme {
+  .owl-controls {
+    .owl-page {
+      &.active {
+        span {
+          background-color: #fcac45;
+        }
+        &:hover {
+          span {
+            background-color: #fcac45;
+          }
+        }
+      }
+      &:hover {
+        span {
+          background: #fff;
+        }
+
+      }
+      span {
+        border-radius: 0;
+      }
+    }
+  }
+}
+/*===设置owl插件指示器的样式 end===*/

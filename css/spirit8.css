@@ -43,6 +43,16 @@ a:hover {
 .margin-b-20 {
   margin-bottom: 20px;
 }
+/*背景渐变*/
+.overlay {
+  background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.73) 17%, rgba(0, 0, 0, 0.66) 35%, rgba(0, 0, 0, 0.55) 62%, rgba(0, 0, 0, 0.4) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 0, 0, 0.8)), color-stop(17%, rgba(0, 0, 0, 0.73)), color-stop(35%, rgba(0, 0, 0, 0.66)), color-stop(62%, rgba(0, 0, 0, 0.55)), color-stop(100%, rgba(0, 0, 0, 0.4)));
+  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.73) 17%, rgba(0, 0, 0, 0.66) 35%, rgba(0, 0, 0, 0.55) 62%, rgba(0, 0, 0, 0.4) 100%);
+  background: -o-linear-gradient(top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.73) 17%, rgba(0, 0, 0, 0.66) 35%, rgba(0, 0, 0, 0.55) 62%, rgba(0, 0, 0, 0.4) 100%);
+  background: -ms-linear-gradient(top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.73) 17%, rgba(0, 0, 0, 0.66) 35%, rgba(0, 0, 0, 0.55) 62%, rgba(0, 0, 0, 0.4) 100%);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.73) 17%, rgba(0, 0, 0, 0.66) 35%, rgba(0, 0, 0, 0.55) 62%, rgba(0, 0, 0, 0.4) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#cc000000', endColorstr='#66000000', GradientType=0);
+}
 /*上下反复移动的动画*/
 @keyframes updown {
   0% {
@@ -55,7 +65,8 @@ a:hover {
 body {
   font-family: "Microsoft yahei";
   color: #5a5a5a;
-  height: 2000px;
+  height: 4000px;
+  background: #fff;
 }
 .menu {
   padding: 20px;
@@ -83,6 +94,10 @@ body {
 }
 .menu.navbar-default .navbar-nav > li.active > a {
   color: #fcac45;
+  background-color: transparent;
+}
+.menu.navbar-default .navbar-nav > li.active > a:hover {
+  background-color: transparent;
 }
 .navbar-toggle {
   border-radius: 0;
@@ -110,16 +125,6 @@ body {
 .home p.lead {
   color: #e3e3e3;
 }
-/*背景渐变*/
-.overlay {
-  background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.73) 17%, rgba(0, 0, 0, 0.66) 35%, rgba(0, 0, 0, 0.55) 62%, rgba(0, 0, 0, 0.4) 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 0, 0, 0.8)), color-stop(17%, rgba(0, 0, 0, 0.73)), color-stop(35%, rgba(0, 0, 0, 0.66)), color-stop(62%, rgba(0, 0, 0, 0.55)), color-stop(100%, rgba(0, 0, 0, 0.4)));
-  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.73) 17%, rgba(0, 0, 0, 0.66) 35%, rgba(0, 0, 0, 0.55) 62%, rgba(0, 0, 0, 0.4) 100%);
-  background: -o-linear-gradient(top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.73) 17%, rgba(0, 0, 0, 0.66) 35%, rgba(0, 0, 0, 0.55) 62%, rgba(0, 0, 0, 0.4) 100%);
-  background: -ms-linear-gradient(top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.73) 17%, rgba(0, 0, 0, 0.66) 35%, rgba(0, 0, 0, 0.55) 62%, rgba(0, 0, 0, 0.4) 100%);
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.73) 17%, rgba(0, 0, 0, 0.66) 35%, rgba(0, 0, 0, 0.55) 62%, rgba(0, 0, 0, 0.4) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#cc000000', endColorstr='#66000000', GradientType=0);
-}
 .content {
   position: relative;
   padding: 20% 0 0 0;
@@ -139,8 +144,7 @@ body {
 }
 /*=== about us begin ===*/
 .about {
-  margin: 40px 0 0;
-  padding: 20px 0 88px;
+  padding: 60px 0 88px;
 }
 .about .about-list {
   margin: 30px 0 0;
@@ -173,7 +177,43 @@ body {
 .services {
   margin: 40px 0 0;
 }
-.services .line {
+.service-devices {
+  margin-top: 35px;
+}
+.service-devices h4 {
+  margin: 15px 0 6px 0;
+}
+/*===services end ===*/
+.team .overlay {
+  padding: 80px 0;
+}
+.team .team-item {
+  background-color: transparent;
+}
+.team-item .thumbnail {
+  background-color: transparent;
+  border: none;
+}
+.team-item .thumbnail .caption {
+  color: #fff;
+}
+.team-item .thumbnail img {
+  display: block;
+  width: 120px;
+  height: 120px;
+  border: 4px solid transparent;
+}
+.team-item a {
+  display: block;
+  border: 4px solid transparent;
+  margin: 15px;
+}
+.team-item a:hover .thumbnail > img {
+  border-color: #fcac45;
+}
+.services .line,
+.team-bg .line,
+.filter-img .line {
   position: relative;
   border-top-style: solid;
   border-color: #fcac45;
@@ -181,7 +221,9 @@ body {
   width: 80px;
   margin: 20px auto 40px auto;
 }
-.services hr {
+.services hr,
+.team-bg hr,
+.filter-img hr {
   position: absolute;
   left: 0;
   right: 0;
@@ -190,11 +232,18 @@ body {
   margin-right: auto;
   border-color: rgba(252, 172, 69, 0.34);
 }
-.service-devices {
-  margin-top: 35px;
+.team-bg {
+  background: url(../imgs/bg-02.jpg) no-repeat center fixed;
+  background-size: cover;
+  color: #fff;
 }
-/*===services end ===*/
-.icon {
+.team-bg .overlay {
+  height: auto;
+}
+.filter-img {
+  padding: 80px 0;
+}
+.icon-diy {
   cursor: pointer;
   width: 100px;
   height: 100px;
@@ -203,8 +252,22 @@ body {
   padding: 27px 25px;
   border-radius: 50%;
 }
-.icon:hover {
+.icon-diy:hover {
   background: #fcac45;
   border-color: #fcac45;
   color: #fff;
 }
+/*===设置owl插件指示器的样式 begin===*/
+.owl-theme .owl-controls .owl-page.active span {
+  background-color: #fcac45;
+}
+.owl-theme .owl-controls .owl-page.active:hover span {
+  background-color: #fcac45;
+}
+.owl-theme .owl-controls .owl-page:hover span {
+  background: #fff;
+}
+.owl-theme .owl-controls .owl-page span {
+  border-radius: 0;
+}
+/*===设置owl插件指示器的样式 end===*/
